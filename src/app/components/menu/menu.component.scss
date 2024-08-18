@@ -1,0 +1,34 @@
+@use '../../../assets/styles/mixins.scss';
+@use '../../../assets/styles/variables.scss';
+
+.menu {
+  background: variables.$color_black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &__container {
+    @include mixins.container();
+  }
+
+  &__item {
+    color: variables.$color_white;
+    cursor: pointer;
+    font:
+      500 24px/20px 'Roboto',
+      sans-serif;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      color: variables.$color_active;
+    }
+
+    &_active {
+      cursor: default;
+      pointer-events: none;
+      color: variables.$color_active;
+    }
+  }
+}
