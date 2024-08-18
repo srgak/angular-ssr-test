@@ -3,7 +3,7 @@
     <a
       *ngFor="let item of list"
       class="menu__item"
-      [routerLink]="[item.link]"
+      [routerLink]="item.link"
       routerLinkActive="menu__item_active"
       >{{ item.name }}</a
     >

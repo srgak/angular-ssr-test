@@ -11,7 +11,7 @@ export class AppComponent {
   public menuList: MenuItem[] = [
     {
       name: 'Главная',
-      link: '',
+      link: 'home',
     },
     {
       name: 'О нас',
