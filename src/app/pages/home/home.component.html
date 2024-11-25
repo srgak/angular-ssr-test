@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="banner">
+  <div class="banner__container">
+    <div class="banner__content">
+      <h1 class="banner__title">My Blog</h1>
+    </div>
+  </div>
+  <img
+    class="banner__background"
+    src="https://s145vla.storage.yandex.net/rdisk/b567c6746d01ccfd96ba3ea47e6cfee527849f2e96cc36de9ed22b469b05d0b3/6714d79f/25i-IyOsyEVdsDNeS360iEB2cjwF_NrM55ZfdIMnH5HpU9PXZIg9n1hOAM7OBFXbXTik8Umpj0MR4ajFJqQzaw==?uid=177193585&filename=FullSizeRender%20%281%29.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=177193585&fsize=824506&hid=0465d53967bced877a05583cbf0188dd&media_type=image&tknv=v2&etag=a7f81602fee6485976aeaf4c2b7f1049&ts=624e5c71de5c0&s=79b67d0fdc064306d22b974874953cd4a62c24ec16e25767917880d15416d5fe&pb=U2FsdGVkX1_24V-AopIiVULNm34XwNVIt6F_3Kzt_e4WQrUwhLDwncfX0UTX-9UsUOI44tLU8kqrqVoC26qPWZF4vWje1BR6CA6iW6m6hH4"
+    alt="фоновая картинка" />
+</div>
+
+<app-articles *ngIf="articleList | async as articleList" [articleList]="articleList"></app-articles>

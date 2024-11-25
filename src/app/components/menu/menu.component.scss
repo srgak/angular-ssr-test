@@ -3,27 +3,30 @@
 
 .menu {
   background: variables.$color_black;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  width: 100%;
 
   &__container {
     @include mixins.container();
+    display: flex;
+    column-gap: 20px;
   }
 
   &__item {
+    padding: 20px 0;
+  }
+
+  &__item:hover &__link {
+    color: variables.$color_active;
+  }
+
+  &__link {
     color: variables.$color_white;
     cursor: pointer;
     font:
       500 24px/20px 'Roboto',
       sans-serif;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-
-    &:hover {
-      color: variables.$color_active;
-    }
+    text-align: center;
+    display: inline-block;
 
     &_active {
       cursor: default;

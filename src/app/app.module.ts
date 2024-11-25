@@ -4,11 +4,13 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule, MenuModule } from './components';
+import { MarkdownModule } from 'ngx-markdown';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, MenuModule, FooterModule],
-  providers: [provideClientHydration()],
+  imports: [BrowserModule, AppRoutingModule, MenuModule, FooterModule, MarkdownModule.forRoot()],
+  providers: [provideClientHydration(), provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

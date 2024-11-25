@@ -1,0 +1,12 @@
+<section class="articles">
+  <div class="articles__container">
+    <a class="articles-item" *ngFor="let item of articleList" [routerLink]="'/articles/' + item.id">
+      <span class="articles-item__title">
+        {{ item.title }}
+      </span>
+      <p class="articles-item__description">
+        {{ item.description }}
+      </p>
+    </a>
+  </div>
+</section>

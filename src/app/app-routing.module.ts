@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { articleListResolver, menuResolver } from './resolvers';
 
 const routes: Routes = [
   {
@@ -16,28 +17,15 @@ const routes: Routes = [
       description: 'Главная страница сайта',
       ogTitle: 'Главная страница',
       ogDescription: 'lorem ipsum dolar emet',
-      ogImage: 'https://placehold.co/600x400',
+    },
+    resolve: {
+      menu: menuResolver,
+      articles: articleListResolver,
     },
   },
   {
-    path: 'about',
-    pathMatch: 'full',
-    loadChildren: () => import('./pages/about/about.module').then((m) => m.AboutModule),
-    data: {
-      title: 'О нас',
-      description: 'Страница О нас',
-      keywords: 'о нас',
-    },
-  },
-  {
-    path: 'contact',
-    pathMatch: 'full',
-    loadChildren: () => import('./pages/contact/contact.module').then((m) => m.ContactModule),
-    data: {
-      title: 'Связаться со мной',
-      description: 'Страница обратной связти',
-      keywords: 'contact',
-    },
+    path: 'articles',
+    loadChildren: () => import('./pages/articles/articles.module').then((m) => m.ArticlesModule),
   },
 ];
 

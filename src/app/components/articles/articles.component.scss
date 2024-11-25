@@ -1,0 +1,33 @@
+@use '../../../assets/styles/variables.scss';
+@use '../../../assets/styles/mixins.scss';
+
+.articles {
+  background: variables.$color_black;
+  padding: 20px 0;
+
+  &__container {
+    @include mixins.container();
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid variables.$color_white;
+    color: variables.$color_white;
+    padding: 20px;
+    text-align: center;
+
+    &__title {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      font-size: 18px;
+    }
+  }
+}

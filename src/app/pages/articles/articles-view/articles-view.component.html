@@ -1,0 +1,9 @@
+<div class="article-view" *ngIf="article | async as article">
+  <div class="article-view__container">
+    <div class="article-view__header">
+      <h1>{{ article.title }}</h1>
+      <a [routerLink]="['../edit']" [state]="{ data: article }">Редактировать</a>
+    </div>
+    <markdown class="test" [data]="article.text"></markdown>
+  </div>
+</div>

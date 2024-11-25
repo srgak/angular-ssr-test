@@ -1,11 +1,9 @@
 <nav class="menu">
-  <div class="menu__container">
-    <a
-      *ngFor="let item of list"
-      class="menu__item"
-      [routerLink]="item.link"
-      routerLinkActive="menu__item_active"
-      >{{ item.name }}</a
-    >
-  </div>
+  <ul class="menu__container">
+    <li *ngFor="let item of list" class="menu__item">
+      <a class="menu__link" [routerLink]="item.link" routerLinkActive="menu__link_active">{{
+        item.name
+      }}</a>
+    </li>
+  </ul>
 </nav>

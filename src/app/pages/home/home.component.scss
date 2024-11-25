@@ -1,0 +1,31 @@
+@use '../../../assets/styles/variables.scss';
+@use '../../../assets/styles/mixins.scss';
+
+.banner {
+  height: 500px;
+  position: relative;
+
+  &__background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__container {
+    @include mixins.container();
+  }
+
+  &__content {
+    padding-top: 150px;
+  }
+
+  &__title {
+    color: variables.$color_white;
+    font-size: 70px;
+    text-shadow: 0 0 5px variables.$color_black;
+  }
+}

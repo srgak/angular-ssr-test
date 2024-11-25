@@ -1,4 +1,4 @@
-<app-menu [list]="menuList"></app-menu>
+<app-menu *ngIf="menuList | async as menuList" [list]="menuList"></app-menu>
 
 <main class="main">
   <router-outlet />

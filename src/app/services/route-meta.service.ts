@@ -10,53 +10,53 @@ export class RouteMetaService {
     private meta: Meta,
   ) {}
 
-  public updateTitle(titleName: string): void {
+  public setTitle(titleName: string): void {
     this.title.setTitle(titleName);
   }
 
-  public updateDescription(description: string): void {
+  public setDescription(description: string): void {
     this.meta.updateTag({
       name: 'description',
       content: description,
     });
   }
 
-  public updateKeywords(key: string): void {
+  public setKeywords(key: string): void {
     this.meta.updateTag({
       name: 'keywords',
       content: key,
     });
   }
 
-  public updateOgTitle(titleName: string): void {
+  public setOgTitle(titleName: string): void {
     this.meta.updateTag({
       property: 'og:title',
       content: titleName,
     });
   }
 
-  public updateOgDescription(description: string): void {
+  public setOgDescription(description: string): void {
     this.meta.updateTag({
       property: 'description',
       content: description,
     });
   }
 
-  public updateOgImage(imageUrl: string): void {
+  public setOgImage(imageUrl: string): void {
     this.meta.updateTag({
       property: 'og:image',
       content: imageUrl,
     });
   }
 
-  public updateOgType(typeName: string): void {
+  public setOgType(typeName: string): void {
     this.meta.updateTag({
       property: 'type',
       content: typeName,
     });
   }
 
-  public updateOgUrl(url: string): void {
+  public setOgUrl(url: string): void {
     this.meta.updateTag({
       property: 'og:url',
       content: url,

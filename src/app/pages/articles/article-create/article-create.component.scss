@@ -1,0 +1,28 @@
+@use '../../../../assets/styles/mixins.scss';
+
+.article-editor {
+  &__container {
+    @include mixins.container();
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__input {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  &__text {
+    padding: 10px;
+    font-size: 18px;
+    resize: vertical;
+    height: 300px;
+  }
+
+  &__button {
+    padding: 10px;
+    align-self: flex-start;
+  }
+}
